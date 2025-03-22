@@ -1,9 +1,9 @@
 function PhoneLayout({ children }) {
   return (
-    <main className="min-h-screen bg-[#FCFCFD] flex flex-col items-center justify-center sm:p-4">
+    <main className="min-h-screen bg-[#FCFCFD] flex flex-col sm:items-center sm:justify-center sm:p-4">
       {/* Mobile view - full width */}
-      <div className="w-full h-full mx-auto sm:hidden">
-        <div className="bg-[#F7F8F9] p-6 w-full h-full">{children}</div>
+      <div className="w-full h-screen mx-auto sm:hidden">
+        <div className="bg-[#F7F8F9] w-full h-full">{children}</div>
       </div>
 
       {/* Tablet and desktop view - phone sized div */}

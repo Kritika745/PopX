@@ -1,8 +1,26 @@
 import { useNavigate } from "react-router-dom"
+import { useState, useRef } from "react"
 import PhoneLayout from "./PhoneLayout"
 
 function Login() {
   const navigate = useNavigate()
+  const [isButtonBlue, setIsButtonBlue] = useState(false)
+  const timerRef = useRef(null)
+
+  const handleInputClick = () => {
+    // Clear any existing timer to handle rapid clicks
+    if (timerRef.current) {
+      clearTimeout(timerRef.current)
+    }
+
+    // Change button to blue
+    setIsButtonBlue(true)
+
+    // Set timer to change back to gray after 1 second
+    timerRef.current = setTimeout(() => {
+      setIsButtonBlue(false)
+    }, 300)
+  }
 
   return (
     <PhoneLayout>
@@ -29,7 +47,9 @@ function Login() {
               <input
                 id="email"
                 type="email"
-                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-gray-500"
+                readOnly
+                onClick={handleInputClick}
+                className="w-full text-xs px-4 py-3 border border-[#CBCBCB] rounded-lg !bg-[#f7f8f9] focus:outline-none text-gray-600 [&:-webkit-autofill]:!bg-[#f7f8f9] [&:-webkit-autofill]:[box-shadow:0_0_0_30px_#f7f8f9_inset] cursor-pointer"
                 placeholder="Enter email address"
               />
             </div>
@@ -43,7 +63,9 @@ function Login() {
               <input
                 id="password"
                 type="password"
-                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-gray-500"
+                readOnly
+                onClick={handleInputClick}
+                className="w-full text-xs px-4 py-3 border border-[#CBCBCB] rounded-lg !bg-[#f7f8f9] focus:outline-none text-gray-600 [&:-webkit-autofill]:!bg-[#f7f8f9] [&:-webkit-autofill]:[box-shadow:0_0_0_30px_#f7f8f9_inset] cursor-pointer"
                 placeholder="Enter password"
               />
             </div>
@@ -51,7 +73,7 @@ function Login() {
 
           <div className="mt-6">
             <button
-              className="w-full bg-[#b8b8b8] hover:bg-[#a0a0a0] text-white py-2 px-4 rounded-lg font-medium"
+              className={`w-full ${isButtonBlue ? "bg-[#6b9fcdd4]" : "bg-[#CBCBCB]"} text-white py-2 px-4 rounded font-medium transition-colors duration-300`}
               onClick={() => navigate("/setting")}
             >
               Login

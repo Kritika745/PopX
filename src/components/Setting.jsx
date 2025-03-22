@@ -24,13 +24,13 @@ function Setting() {
               </div>
             </div>
             <div className="ml-4 text-[#1D2226] ">
-              <h2 className="font-medium">Marry Doe</h2>
-              <p className=" text-sm">Marry@Gmail.Com</p>
+              <h2 className="font-medium text-sm">Marry Doe</h2>
+              <p className=" text-xs">Marry@Gmail.Com</p>
             </div>
           </div>
 
           <div className=" pb-4 pl-4 pr-4 border-b border-gray-300 border-dashed">
-            <p className="text-[#1D2226] text-sm ">
+            <p className="text-[#1D2226] text-xs font-medium ">
               Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore
               Et Dolore Magna Aliquyam Erat, Sed Diam
             </p>

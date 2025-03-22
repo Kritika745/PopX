@@ -6,9 +6,9 @@ function SignUp() {
 
   return (
     <PhoneLayout>
-      <div className="p-6 h-full flex flex-col bg-[#f7f8f9]">
+      <div className="p-6 h-full flex flex-col bg-[#f7f8f9] justify-between">
         <div className="mt-2">
-          <h1 className="text-[28px] font-bold text-[#333333] leading-tight">
+          <h1 className="text-[28px] font-bold text-[#1D2226] leading-tight">
             Create your
             <br />
             PopX account
@@ -24,7 +24,7 @@ function SignUp() {
               <input
                 id="fullName"
                 type="text"
-                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-gray-500"
+                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-[#1D2226] font-medium"
                 defaultValue="Marry Doe"
               />
             </div>
@@ -38,7 +38,7 @@ function SignUp() {
               <input
                 id="phone"
                 type="tel"
-                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-gray-500"
+                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-[#1D2226] font-medium"
                 defaultValue="Marry Doe"
               />
             </div>
@@ -52,7 +52,7 @@ function SignUp() {
               <input
                 id="email"
                 type="email"
-                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-gray-500"
+                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-[#1D2226] font-medium"
                 defaultValue="Marry Doe"
               />
             </div>
@@ -65,8 +65,8 @@ function SignUp() {
               </div>
               <input
                 id="password"
-                type="password"
-                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-gray-500"
+                type="text"
+                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-[#1D2226] font-medium"
                 defaultValue="Marry Doe"
               />
             </div>
@@ -80,13 +80,13 @@ function SignUp() {
               <input
                 id="company"
                 type="text"
-                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-gray-500"
+                className="w-full text-xs px-4 py-3 border border-gray-300 rounded-lg bg-[#f7f8f9] focus:outline-none text-[#1D2226] font-medium"
                 defaultValue="Marry Doe"
               />
             </div>
 
             <div className="mt-2">
-              <p className="text-xs font-medium text-[#6C25FF]">
+              <p className="text-xs font-medium text-[#1D2226] ">
                 Are you an Agency?<span className="text-red-500">*</span>
               </p>
               <div className="flex items-center space-x-6 mt-2">
@@ -99,8 +99,8 @@ function SignUp() {
                       defaultChecked
                       className="opacity-0 absolute h-5 w-5"
                     />
-                    <div className="h-5 w-5 rounded-full border border-[#6c5ce7] flex items-center justify-center">
-                      <div className="h-3 w-3 rounded-full bg-[#6c5ce7]"></div>
+                    <div className="h-5 w-5 rounded-full border border-[#6C25FF] flex items-center justify-center">
+                      <div className="h-3 w-3 rounded-full bg-[#6C25FF]"></div>
                     </div>
                   </div>
                   <span className="ml-2 text-gray-700">Yes</span>
@@ -115,15 +115,15 @@ function SignUp() {
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="mt-8">
-            <button
-              className="w-full bg-[#6C25FF]  text-white py-2 px-4 rounded-lg font-medium"
-              onClick={() => navigate("/setting")}
-            >
-              Create Account
-            </button>
-          </div>
+        <div className="mt-8">
+          <button
+            className="w-full bg-[#6C25FF] text-white py-2 px-4 rounded font-medium"
+            onClick={() => navigate("/setting")}
+          >
+            Create Account
+          </button>
         </div>
       </div>
     </PhoneLayout>
@@ -131,3 +131,4 @@ function SignUp() {
 }
 
 export default SignUp
+
